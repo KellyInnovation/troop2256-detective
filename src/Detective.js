@@ -7,7 +7,7 @@ import { useHistory } from 'react-router-dom';
 
 import Lock from './Lock';
 
-export default function Home () {
+export default function Detective () {
   const history = useHistory();
 
   const [hasDate, setHasDate] = useState(false);

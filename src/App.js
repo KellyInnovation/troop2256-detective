@@ -10,6 +10,8 @@ import './App.css';
 import Home from './Home';
 import Detective from './Detective';
 import Christmas from './Christmas';
+import Cookies from './Cookies';
+import Games from './Games';
 
 function App() {
   return (
@@ -33,6 +35,14 @@ function App() {
                 <Route
                   path='/christmas'
                   component={Christmas}
+                />
+                <Route
+                  path='/cookies'
+                  component={Cookies}
+                />
+                <Route
+                  path='/games'
+                  component={Games}
                 />
               </Switch>
             </div>

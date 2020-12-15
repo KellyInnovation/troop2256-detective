@@ -75,7 +75,7 @@ export default function Home () {
       
       <Lock
         answer=''
-        question='What team are you on?'
+        question='Are you ready to solve the mystery?'
         clickFunction={() => history.push('/detective')}
         required={false}
       />

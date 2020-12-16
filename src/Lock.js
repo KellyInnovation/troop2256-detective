@@ -21,6 +21,8 @@ export default function Lock ({
   required,
 }) {
   const [lockCode, setLockCode] = useState();
+  const [clicked, setClicked] = useState(false);
+
   const matches = (
     _.lowerCase(lockCode) === _.lowerCase(answer)
   ) || (
@@ -49,13 +51,16 @@ export default function Lock ({
           <Button
             className='lock-btn'
             disabled={required && !matches}
-            onClick={clickFunction}
+            onClick={() => {setClicked(true); clickFunction();}}
           >
             <img className='lock-img' src={lock} />
             &nbsp;&nbsp;&nbsp; {
               !matches && required ?
-              'Locked' :
-              'Unlocked'
+              'Locked' : (
+                clicked ?
+                'GREAT!!' :
+                'Unlocked'
+              )
             }
           </Button>
         </Col>

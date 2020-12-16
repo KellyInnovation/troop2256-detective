@@ -114,14 +114,18 @@ export default function Detective () {
           />
         </div>
       }
-      {hasBadges && hasSign && hasMotto && hasCircle &&
-        <Button
-          className='btn'
-          onClick={() => history.push('/christmas')}
-        >
-          Keep Solving
-        </Button>
-      }
+      <Row>
+        <Col md={{ size: 4, offset: 4 }}>
+          {hasBadges && hasSign && hasMotto && hasCircle &&
+            <Button
+              className='btn'
+              onClick={() => history.push('/christmas')}
+            >
+              Keep Solving
+            </Button>
+          }
+        </Col>
+      </Row>
     </div>
   );
 }

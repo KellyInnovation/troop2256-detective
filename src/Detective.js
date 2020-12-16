@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import {
   Button,
+  Col,
   Row,
 } from 'reactstrap';
 import { useHistory } from 'react-router-dom';

@@ -109,8 +109,8 @@ export default function Christmas () {
       <br/>
       <br/>
       <Lock
-        answer='25233'
-        question='Find the number code'
+        answer={['25233', '2 5 2 3 3', '2-5-2-3-3']}
+        question='Find the number code (numbers only)'
         clickFunction={() => setPuzzleDone(true)}
       />
       <br/>

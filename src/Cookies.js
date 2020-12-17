@@ -33,6 +33,32 @@ export default function Christmas () {
           allowFullScreen
         ></iframe>
       </Row>
+      <br />
+      <br />
+      <Lock
+        answer={['flower', 'daisy', 'flowers', 'daisies', 'flower-like', 'flower like']}
+        question='What shape are the Caramel DeLites'
+        clickFunction={() => setPuzzleDone(true)}
+      />
+      <Lock
+        answer={['abc bakers', 'abc baker', 'abc']}
+        question='What cookie bakery do we use?'
+        clickFunction={() => setPuzzleDone(true)}
+      />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
     </div>
   );
 }

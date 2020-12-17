@@ -23,24 +23,14 @@ export default function Christmas () {
 
   return (
     <div className="home">
-      <Row>
-        <h2>Rurus Christmas Run</h2>
-      </Row>
-      <Row>
-        <h4>Press Space bar to jump</h4>
-      </Row>
-      <Row>
-        <iframe 
-          src="https://itch.io/embed/106674" 
-          height="167" 
-          width="552" 
-          frameBorder="0"
-        >
-          <a href="https://tech-dog.itch.io/rurus-christmas-run">
-            Ruru&#039;s Christmas Run by Tech Dog
-          </a>
-        </iframe>
-      </Row>
+      <iframe 
+        src="https://wanted5games.com/games/html5/santas-quest-new-en-s-iga-cloud/index.html?pub=10" 
+        name="cloudgames-com" 
+        width="500" 
+        height="600" 
+        frameBorder="0" 
+        scrolling="no"
+      ></iframe>
       <br/>
       <br/>
       <Row>
@@ -53,19 +43,14 @@ export default function Christmas () {
       </Row>
       <br/>
       <br/>
-      <h4>Use space to jump and arrows to move</h4>
-      <Row>
-        <iframe 
-          src="https://itch.io/embed/454110" 
-          height="167" 
-          width="552" 
-          frameBorder={0}
-        >
-          <a href="https://anasarshad.itch.io/unicorn">
-            Unicorn by anasarshad
-          </a>
-        </iframe>
-      </Row>
+      <iframe 
+        src="https://wanted5games.com/games/html5/funny-pet-haircut-new-en-s-iga-cloud/index.html?pub=10" 
+        name="cloudgames-com" 
+        width="875" 
+        height="467" 
+        frameBorder="0" 
+        scrolling="no"
+      ></iframe>
       <br/>
       <br/>
       <Row>
@@ -76,6 +61,38 @@ export default function Christmas () {
           allowFullScreen
         ></iframe>
       </Row>
+      <br/>
+      <br/>
+      <iframe 
+        src="https://wanted5games.com/games/html5/jewel-christmas-new-en-s-iga-cloud/index.html?pub=10" 
+        name="cloudgames-com" 
+        width="509" 
+        height="606" 
+        frameBorder="0" 
+        scrolling="no"
+      ></iframe>
+      <br/>
+      <br/>
+      <iframe 
+        src="https://wanted5games.com/games/html5/pop-pop-candies-new-en-s-iga-cloud/index.html?pub=10" 
+        name="cloudgames-com" 
+        width="500" 
+        height="672" 
+        frameBorder="0" 
+        scrolling="no"
+      ></iframe>
+      <br/>
+      <br/>
+      <iframe 
+        src="https://wanted5games.com/games/html5/zumba-mania-new-en-s-iga-cloud/index.html?pub=10" 
+        name="cloudgames-com" 
+        width="500" 
+        height="760" 
+        frameBorder="0" 
+        scrolling="no"
+      ></iframe>
+      <br/>
+      <br/>
       <br/>
       <br/>
       <br/>

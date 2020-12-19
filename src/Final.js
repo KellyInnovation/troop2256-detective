@@ -1,66 +1,82 @@
 import React, { useState } from 'react';
 import {
-  Button,
   Col,
   Row,
+  Tooltip,
 } from 'reactstrap';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
+import info from './assets/info.png';
+import morse from './assets/morse.jpg';
+import santaFlying from './assets/santa-flying.jpg';
+import lock from './assets/lock.png';
+import detective from './assets/detectives.jpg';
+import reindeer from './assets/reindeer.png';
+import caramelDelite from './assets/caramel-delite.jpg'
+import gamer from './assets/gamer.jpg';
+import santaQuest from './assets/santa-quest.png';
 
 import Lock from './Lock';
 
 export default function Final () {
-  const history = useHistory();
+  const [finalAnswerDone, setFinalAnswerDone] = useState(false);
+  const [tooltipOpen, setTooltipOpen] = useState(false);
 
-  const [morse1Done, setMorse1Done] = useState(false);
-  const [hasGirlGuide, setHasGirlGuide] = useState(false);
-  const [hasBadges, setHasBadges] = useState(false);
-  const [hasSign, setHasSign] = useState(false);
-  const [hasMotto, setHasMotto] = useState(false);
-  const [hasCircle, setHasCircle] = useState(false);
-
-  const isDone = morse1Done;
+  const toggle = () => setTooltipOpen(!tooltipOpen);
 
   return (
     <div className="final">
       <Row>
         <h4 className='row'>
-          To be a great detective, you have to start with the basics.
+          Great job.  Now, one last mystery to solve:
         </h4>
-        <h4 className='row'>
-          Learn about Girl Scouts to know how you can help solve the mystery.
-        </h4>
-        <br />
-        <iframe 
-          width="560" 
-          height="315" 
-          src="https://www.youtube.com/embed/RguQd_1PGDw" 
-          frameBorder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          allowFullScreen
-        ></iframe>
       </Row>
+      <br />
+      <br />
+      <Row>
+        <Col>
+        <h4 className='row'>
+          ...&nbsp;&nbsp;&nbsp;.-&nbsp;&nbsp;&nbsp;.-..&nbsp;&nbsp;&nbsp;.-..&nbsp;&nbsp;&nbsp;-.-- / 
+          &nbsp;....&nbsp;&nbsp;&nbsp;.-&nbsp;&nbsp;&nbsp;-.. / 
+          &nbsp;-&nbsp;&nbsp;&nbsp;....&nbsp;&nbsp;&nbsp;. /
+          &nbsp; -.-.&nbsp;&nbsp;&nbsp;---&nbsp;&nbsp;&nbsp;---&nbsp;&nbsp;&nbsp;-.-&nbsp;&nbsp;&nbsp;..&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;... / 
+          &nbsp; -...&nbsp;&nbsp;&nbsp;-.-- /
+          &nbsp; ....&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;.-. /
+          &nbsp; -...&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;-..
+        </h4>
+        </Col>
+        <Col md={1}>
+          <img
+            src={info}
+            style={{width: '50%'}}
+            id="TooltipExample"
+          />
+        </Col>
+      </Row>
+      <Tooltip placement="left" isOpen={tooltipOpen} target="TooltipExample" toggle={toggle}>
+        <img src={morse} />
+      </Tooltip>
+      <br />
       <Lock
-        answer='1912'
-        question='What year did Girl Scouts begin?'
-        // clickFunction={() => setHasDate(true)}
+        answer='sally had the cookies by her bed'
+        question='Where does the message say?'
+        clickFunction={() => setFinalAnswerDone(true)}
       />
       <br />
       <hr />
       <br />
-      <Lock
-        answer={['girl guides', 'girl guide']}
-        question='What were Girl Scouts originally called (and still named in many countries)?'
-        clickFunction={() => setHasGirlGuide(true)}
-      />
-      <br />
-      <hr />
-      <br />
-      {/* {isDone && */}
+      {finalAnswerDone &&
         <div>
           <Row>
             <h1>
               Congratulations! You solved the mystery!
             </h1>
+          </Row>
+          <br />
+          <Row>
+            <h3>
+              You found the cookies to help the reindeer fly.  
+            </h3>
           </Row>
           <Row>
             <h3>
@@ -68,9 +84,14 @@ export default function Final () {
             </h3>
           </Row>
           <br />
+          <img src={santaFlying} style={{height: '250px'}} />
           <br />
           <br />
-          <br />
+          <Row>
+            <h3>
+              To get yours, open your gift.
+            </h3>
+          </Row>
           <br />
           <Row>
             <h3>
@@ -79,67 +100,100 @@ export default function Final () {
           </Row>
           <br />
           <Row>
-            <Col md={3}><b>Blue</b></Col>
-            <Col md={3}>783</Col>
+            <Col md={6}>
+              <Row>
+                <Col md={6}><b>Blue</b></Col>
+                <Col md={6}>783</Col>
+              </Row>
+              <Row>
+                <Col md={6}><b>Dark Green</b></Col>
+                <Col md={6}>157</Col>
+              </Row>
+              <Row>
+                <Col md={6}><b>Silver</b></Col>
+                <Col md={6}>804</Col>
+              </Row>
+              <Row>
+                <Col md={6}><b>Pink</b></Col>
+                <Col md={6}>926</Col>
+              </Row>
+              <Row>
+                <Col md={6}><b>Black</b></Col>
+                <Col md={6}>175</Col>
+              </Row>
+              <Row>
+                <Col md={6}><b>Light Green</b></Col>
+                <Col md={6}>206</Col>
+              </Row>
+              <Row>
+                <Col md={6}><b>Red</b></Col>
+                <Col md={6}>384</Col>
+              </Row>
+              <Row>
+                <Col md={6}><b>Purple</b></Col>
+                <Col md={6}>521</Col>
+              </Row>
+            </Col>
+            <Col md={2}>
+              <img src={lock} />
+            </Col>
           </Row>
+          <br />
+          <br />
+          <br />
           <Row>
-            <Col md={3}><b>Dark Green</b></Col>
-            <Col md={3}>157</Col>
-          </Row>
-          <Row>
-            <Col md={3}><b>Silver</b></Col>
-            <Col md={3}>804</Col>
-          </Row>
-          <Row>
-            <Col md={3}><b>Pink</b></Col>
-            <Col md={3}>926</Col>
-          </Row>
-          <Row>
-            <Col md={3}><b>Black</b></Col>
-            <Col md={3}>175</Col>
-          </Row>
-          <Row>
-            <Col md={3}><b>Light Green</b></Col>
-            <Col md={3}>206</Col>
-          </Row>
-          <Row>
-            <Col md={3}><b>Red</b></Col>
-            <Col md={3}>384</Col>
-          </Row>
-          <Row>
-            <Col md={3}><b>Purple</b></Col>
-            <Col md={3}>521</Col>
+            <Col md={7}>
+              <Row>
+                <Col>
+                  <img src={detective} style={{height: '100px'}} />
+                </Col>
+                <Col>
+                  <img src={reindeer} style={{height: '100px'}} />
+                </Col>
+                <Col>
+                  <img src={caramelDelite} style={{height: '100px'}} />
+                </Col>
+                <Col>
+                  <img src={gamer} style={{height: '100px'}} />
+                </Col>
+              </Row>
+            </Col>
+            <Col>
+              <Row>
+                You can now revist any page:
+              </Row>
+              <Row>
+                <Link to='/'>Home</Link>
+              </Row>
+              <Row>
+                <Link to='/detective'>Detective</Link>
+              </Row>
+              <Row>
+                <Link to='/christmas'>Christmas</Link>
+              </Row>
+              <Row>
+                <Link to='/cookies'>Cookies</Link>
+              </Row>
+              <Row>
+                <Link to='/games'>Games</Link>
+              </Row>
+            </Col>
           </Row>
           <br />
           <br />
           <br />
           <br />
           <Row>
-            You can now revist any page:
+            <Col>
+              <h1>NOW YOU CAN PLAY GAMES</h1>
+              <h1><Link to='/games'>GAMES</Link></h1>
+            </Col>
+            <Col md={3}>
+              <img src={santaQuest} />
+            </Col>
           </Row>
-          <Row>
-            <Link to='/'>Home</Link>
-          </Row>
-          <Row>
-            <Link to='/detective'>Detective</Link>
-          </Row>
-          <Row>
-            <Link to='/christmas'>Christmas</Link>
-          </Row>
-          <Row>
-            <Link to='/cookies'>Cookies</Link>
-          </Row>
-          <Row>
-            <Link to='/games'>Games</Link>
-          </Row>
-          <br />
-          <br />
-          <br />
-          <br />
-          <h1>NOW YOU CAN PLAY GAMES</h1>
-          <h1><Link to='/games'>GAMES</Link></h1>
         </div>
-      {/* } */}
+      }
       <br />
       <br />
       <br />

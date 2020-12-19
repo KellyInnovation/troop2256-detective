@@ -11,6 +11,7 @@ import Home from './Home';
 import Detective from './Detective';
 import Christmas from './Christmas';
 import Cookies from './Cookies';
+import Final from './Final';
 import Games from './Games';
 
 function App() {
@@ -39,6 +40,10 @@ function App() {
                 <Route
                   path='/cookies'
                   component={Cookies}
+                />
+                <Route
+                  path='/final'
+                  component={Final}
                 />
                 <Route
                   path='/games'

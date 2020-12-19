@@ -1,28 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
-  Col,
   Row,
 } from 'reactstrap';
 import {
-  useHistory,
+  Link,
 } from 'react-router-dom';
 
-import detectiveSanta from './assets/detective-santa.jpg'
-import hat from './assets/hat.jpg'
-import peppermint from './assets/peppermint.jpg'
-import snowglobe from './assets/snowglobe.png'
-import tree from './assets/tree.png'
-import gift from './assets/gift.png'
-
-import Lock from './Lock';
-
-export default function Christmas () {
-  const history = useHistory();
-
-  const [puzzleDone, setPuzzleDone] = useState(false);
-
+export default function Games () {
   return (
     <div className="home">
+      <br />
+      <h3>Back to Final Page</h3>
+      <h3><Link to='/final'>Final Page</Link></h3>
+      <br />
+      <br />
       <iframe 
         src="https://wanted5games.com/games/html5/santas-quest-new-en-s-iga-cloud/index.html?pub=10" 
         name="cloudgames-com" 

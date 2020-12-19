@@ -24,3 +24,14 @@
 .home, img {
   max-width: 100%;
 }
+
+.cookie-box {
+  height: 200px;
+  margin: 5px;
+}
+
+.cookie-name {
+  color: black;
+  height: 70px;
+  margin: 5px;
+}

@@ -3,26 +3,40 @@ import {
   Col,
   Row,
 } from 'reactstrap';
-import {
-  useHistory,
-} from 'react-router-dom';
 
-import detectiveSanta from './assets/detective-santa.jpg'
-import hat from './assets/hat.jpg'
-import peppermint from './assets/peppermint.jpg'
-import snowglobe from './assets/snowglobe.png'
-import tree from './assets/tree.png'
-import gift from './assets/gift.png'
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
+
+import './App.css';
+
+import cookieSquare from './assets/cookie-square.jpeg'
 
 import Lock from './Lock';
+import CookieDropComponent from './CookieDropComponent';
 
-export default function Christmas () {
-  const history = useHistory();
-
-  const [puzzleDone, setPuzzleDone] = useState(false);
+export default function Cookies () {
+  const [shapeDone, setShapeDone] = useState(false);
+  const [bakeryDone, setBakeryDone] = useState(false);
 
   return (
-    <div className="home">
+    <div className="cookies">
+      <Row>
+        <Col md={3}>
+          <img src={cookieSquare} />
+        </Col>
+        <Col>
+          <br/>
+          <h4 className='row'>
+            Now that you know about the season, let's learn about the cookies.
+          </h4>
+          <h4 className='row'>
+            Let's learn about the missing cookies to know how to find them.
+          </h4>
+        </Col>
+      </Row>
+      <br />
+      <br />
+      <br />
       <Row>
         <iframe 
           width="560" 
@@ -38,25 +52,25 @@ export default function Christmas () {
       <Lock
         answer={['flower', 'daisy', 'flowers', 'daisies', 'flower-like', 'flower like']}
         question='What shape are the Caramel DeLites'
-        clickFunction={() => setPuzzleDone(true)}
+        clickFunction={() => setShapeDone(true)}
       />
       <Lock
         answer={['abc bakers', 'abc baker', 'abc']}
         question='What cookie bakery do we use?'
-        clickFunction={() => setPuzzleDone(true)}
+        clickFunction={() => setBakeryDone(true)}
       />
       <br />
       <br />
+      <h3>Place the cookies with their color and name.</h3>
+      <br />
+      <DndProvider backend={HTML5Backend}>
+        {shapeDone && bakeryDone &&
+          <CookieDropComponent />
+        }
+      </DndProvider>
       <br />
       <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      
       <br />
       <br />
     </div>
